@@ -39,7 +39,6 @@ def project_detail(request, project_slug):
             id = json.loads(request.body)['id']
             expense = Expense.objects.get(id=id)
             expense.delete()
-        
         except:
             return HttpResponse(status=404)
 
